@@ -50,7 +50,7 @@ public class Detailsitem extends AppCompatActivity {
         quantity = read.getInt(read.getColumnIndex(DataContract.DataEntry.COLUMN_QUANTITY));
         QuantityTEXT.setText(String.valueOf(quantity));
         blob = read.getString(read.getColumnIndex(DataContract.DataEntry.COLUMN_IMAGE));
-        ImageVIEW.setImageBitmap(getBitmapUri(Uri.parse(blob)));
+        ImageVIEW.setImageBitmap(getUri(Uri.parse(blob)));
         price = read.getString(read.getColumnIndex(DataContract.DataEntry.COLUMN_PRICE));
         email = read.getString(read.getColumnIndex(DataContract.DataEntry.COLUMN_EMAIL));
         PriceTEXT.setText(price);
@@ -125,7 +125,7 @@ public class Detailsitem extends AppCompatActivity {
         startActivity(intent);
     }
 
-    private Bitmap getBitmapUri(Uri uri) {
+    private Bitmap getUri(Uri uri) {
         ParcelFileDescriptor parcelFileDescriptor = null;
         try {
             parcelFileDescriptor = this.getContentResolver().openFileDescriptor(uri, "r");

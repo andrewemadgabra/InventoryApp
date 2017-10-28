@@ -65,7 +65,7 @@ public class InventoryAdapter extends CursorAdapter {
         NameTEXT.setText(name);
         String blob = cursor.getString(cursor.getColumnIndex(DataContract.DataEntry.COLUMN_IMAGE));
 
-        ImageVIEW.setImageBitmap(getBitmapUri(Uri.parse(blob)));
+        ImageVIEW.setImageBitmap(getUri(Uri.parse(blob)));
         String price = cursor.getString(cursor.getColumnIndex(DataContract.DataEntry.COLUMN_PRICE));
         PriceTEXT.setText(price);
 
@@ -82,7 +82,7 @@ public class InventoryAdapter extends CursorAdapter {
         });
     }
 
-    private Bitmap getBitmapUri(Uri uri) {
+    private Bitmap getUri(Uri uri) {
         ParcelFileDescriptor parcelFileDescriptor = null;
         try {
             parcelFileDescriptor = activity.getContentResolver().openFileDescriptor(uri, "r");
