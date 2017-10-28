@@ -28,6 +28,7 @@ public class Add extends AppCompatActivity {
     DataBase dp = new DataBase(this);
     Item testimage = new Item();
     Uri uri;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -78,10 +79,9 @@ public class Add extends AppCompatActivity {
                 String test;
                 if (uri == null) {
                     Toast.makeText(getApplicationContext(), "Not Found Image", Toast.LENGTH_LONG).show();
-                }
-                else {
+                } else {
                     test = testimage.setImage(uri.toString());
-                    if (name.length() != 0 && price.length() != 0  &&  quantity.length() != 0 &&  email.length() != 0) {
+                    if (name.length() != 0 && price.length() != 0 && quantity.length() != 0 && email.length() != 0) {
                         if (dp.insert(name, price, quantity, email, test)) {
                             Toast.makeText(getApplicationContext(), "Done", Toast.LENGTH_LONG).show();
                             Intent intent = new Intent(Add.this, MainActivity.class);
