@@ -107,7 +107,7 @@ public class Detailsitem extends AppCompatActivity {
                 emails.putExtra(Intent.EXTRA_EMAIL, email);
                 emails.putExtra(Intent.EXTRA_SUBJECT, "Order Item");
                 emails.putExtra(Intent.EXTRA_TEXT, message);
-                startActivity(Intent.createChooser(emails, "Send mail using..."));
+                startActivity(Intent.createChooser(emails, "Send mail"));
             }
         });
         Button deletes = (Button) findViewById(R.id.delete);
