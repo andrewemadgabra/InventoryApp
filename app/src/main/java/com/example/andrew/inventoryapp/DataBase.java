@@ -46,11 +46,10 @@ public class DataBase extends SQLiteOpenHelper {
         return id != 0;
     }
 
-    public void deleteProduct(int product) {
-        SQLiteDatabase db = this.getWritableDatabase();
-        String[] selectionArgs = new String[]{String.valueOf(product)};
-        db.delete(DataContract.DataEntry.Table_name, DataContract.DataEntry._ID + " = ?", selectionArgs);
-        db.close();
+    public void deleteitem(int item) {
+        SQLiteDatabase db = getReadableDatabase();
+        String query = "DELETE FROM " + DataContract.DataEntry.Table_name + " WHERE " + DataContract.DataEntry._ID + "=" + item;
+        db.execSQL(query);
     }
 
     public Cursor readData() {

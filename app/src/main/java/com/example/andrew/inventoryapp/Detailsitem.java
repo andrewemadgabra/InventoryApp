@@ -107,8 +107,15 @@ public class Detailsitem extends AppCompatActivity {
                 emails.putExtra(Intent.EXTRA_EMAIL, email);
                 emails.putExtra(Intent.EXTRA_SUBJECT, "Order Item");
                 emails.putExtra(Intent.EXTRA_TEXT, message);
-                //email.putExtra(Intent.EXTRA_STREAM, Uri.parse("mailto:"));
                 startActivity(Intent.createChooser(emails, "Send mail using..."));
+            }
+        });
+        Button deletes = (Button) findViewById(R.id.delete);
+        deletes.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                db.deleteitem(idopen);
+                Intent intent = new Intent(Detailsitem.this, MainActivity.class);
+                startActivity(intent);
             }
         });
     }

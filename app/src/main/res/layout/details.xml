@@ -95,27 +95,38 @@
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:orientation="horizontal">
+        <Button
+            android:id="@+id/delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="delete"
+            android:layout_alignBaseline="@+id/sale"
+            android:layout_alignBottom="@+id/sale"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
 
         <Button
             android:id="@+id/sale"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/update"
-            android:layout_alignStart="@+id/update"
-            android:layout_below="@+id/update"
             android:gravity="center"
-            android:text="sale" />
+            android:text="sale"
+            android:layout_alignBaseline="@+id/update"
+            android:layout_alignBottom="@+id/update"
+            android:layout_centerHorizontal="true" />
 
         <Button
             android:id="@+id/update"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="11dp"
+            android:layout_marginTop="14dp"
             android:gravity="center"
             android:onClick="update"
-            android:text="update" />
+            android:text="update"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
 
         <Button
             android:id="@+id/order"
