@@ -44,7 +44,6 @@ public class Detailsitem extends AppCompatActivity {
         TextView NameTEXT = (TextView) findViewById( R.id.productnamedetails );
         PriceTEXT = (TextView) findViewById( R.id.textpricedetails );
         QuantityTEXT = (TextView) findViewById( R.id.quantitydetails );
-        updatequantity = (TextView) findViewById( R.id.updateqantity );
         ImageView ImageVIEW = (ImageView) findViewById( R.id.imagesdetails );
         idopen = MainActivity.positions;
         db.readData();
