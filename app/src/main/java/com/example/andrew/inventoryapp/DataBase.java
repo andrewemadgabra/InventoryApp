@@ -74,9 +74,9 @@ public class DataBase extends SQLiteOpenHelper {
         db.execSQL( query );
     }
 
-    public boolean updatesale(int update, int ID) {
+    public boolean updatequantity(int update, int ID) {
         SQLiteDatabase db = getReadableDatabase();
-        String query = "UPDATE " + DataContract.DataEntry.Table_name + " SET price = " + update + " WHERE  " + DataContract.DataEntry._ID + "=" + ID;
+        String query = "UPDATE " + DataContract.DataEntry.Table_name + " SET quantity = " + update + " WHERE  " + DataContract.DataEntry._ID + "=" + ID;
         db.execSQL( query );
         return update != 0;
     }

@@ -121,7 +121,6 @@ public class Detailsitem extends AppCompatActivity {
                     }
                 } );
                 builder.show();
-
             }
         } );
     }
