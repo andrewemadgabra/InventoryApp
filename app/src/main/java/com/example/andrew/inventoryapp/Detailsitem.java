@@ -122,7 +122,6 @@ public class Detailsitem extends AppCompatActivity {
 
     public void update(View view) {
         Intent intent = new Intent( Detailsitem.this, MainActivity.class );
-        finish();
         startActivity( intent );
     }
 
