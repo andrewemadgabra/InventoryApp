@@ -1,6 +1,5 @@
 package com.example.andrew.inventoryapp;
 
-import android.net.Uri;
 import android.provider.BaseColumns;
 
 /**
