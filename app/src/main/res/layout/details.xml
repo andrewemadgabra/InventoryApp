@@ -100,22 +100,13 @@
             android:id="@+id/delete"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignBaseline="@+id/sale"
-            android:layout_alignBottom="@+id/sale"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
             android:gravity="center"
-            android:text="delete" />
-
-        <Button
-            android:id="@+id/sale"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:text="delete"
             android:layout_alignBaseline="@+id/update"
             android:layout_alignBottom="@+id/update"
-            android:layout_centerHorizontal="true"
-            android:gravity="center"
-            android:text="sale" />
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"/>
+
 
         <Button
             android:id="@+id/update"

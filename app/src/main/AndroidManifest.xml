@@ -21,6 +21,7 @@
         </activity>
         <activity android:name=".Add"></activity>
         <activity android:name=".Detailsitem"></activity>
+        <activity android:name=".saleview"></activity>
     </application>
 
 </manifest>

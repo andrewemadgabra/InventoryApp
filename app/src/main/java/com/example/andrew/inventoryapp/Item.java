@@ -5,6 +5,7 @@ package com.example.andrew.inventoryapp;
  */
 
 public class Item {
+
     public String productName;
     public String quantity;
     public String price;
