@@ -86,7 +86,7 @@ public class InventoryAdapter extends CursorAdapter {
                     db.updatequantity( result, test );
                     QuantityTEXT.setText( String.valueOf( result ) );
                 } else {
-                    Toast.makeText( activity.getApplicationContext(), "No found product quantity", Toast.LENGTH_LONG ).show();
+                    Toast.makeText( activity.getApplicationContext(), "No found quantity product", Toast.LENGTH_LONG ).show();
                 }
             }
         } );

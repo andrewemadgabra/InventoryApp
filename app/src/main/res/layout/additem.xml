@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_add_product"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.example.andrew.inventoryapp.Add">
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/activity_add_product"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context="com.example.andrew.inventoryapp.Add">
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:orientation="vertical">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -25,14 +25,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Name"
-                    android:textSize="20sp" />
+                    android:textSize="20sp"/>
 
                 <EditText
                     android:id="@+id/editname"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="5"
-                    android:hint="put name product" />
+                    android:hint="put name product"/>
 
             </LinearLayout>
 
@@ -45,15 +45,15 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Quantity"
-                    android:textSize="20sp" />
+                    android:textSize="20sp"/>
 
                 <EditText
                     android:id="@+id/quantityname"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="5"
-                    android:inputType="phone"
-                    android:hint="put number of Quantity" />
+                    android:hint="put number of Quantity"
+                    android:inputType="phone"/>
             </LinearLayout>
 
             <LinearLayout
@@ -65,15 +65,15 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Price"
-                    android:textSize="20sp" />
+                    android:textSize="20sp"/>
 
                 <EditText
                     android:id="@+id/priceitem"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="5"
-                    android:inputType="phone"
-                    android:hint="put number of price" />
+                    android:hint="put number of price"
+                    android:inputType="phone"/>
             </LinearLayout>
 
             <LinearLayout
@@ -86,14 +86,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Email"
-                    android:textSize="20sp" />
+                    android:textSize="20sp"/>
 
                 <EditText
                     android:id="@+id/emails"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="5"
-                    android:hint="Email" />
+                    android:hint="Email"/>
             </LinearLayout>
 
             <LinearLayout
@@ -105,7 +105,7 @@
                     android:id="@+id/image_view"
                     android:layout_width="200dp"
                     android:layout_height="200dp"
-                    android:layout_gravity="center" />
+                    android:layout_gravity="center"/>
 
             </LinearLayout>
 
@@ -120,14 +120,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:text="Add Image" />
+                    android:text="Add Image"/>
 
                 <Button
                     android:id="@+id/saveinput"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:text="SAVE" />
+                    android:text="SAVE"/>
 
             </LinearLayout>
 
