@@ -44,8 +44,4 @@ public class MainActivity extends AppCompatActivity {
         } );
         listView.setEmptyView( emptylist );
     }
-
-    public void clicksale(int id) {
-
-    }
 }
