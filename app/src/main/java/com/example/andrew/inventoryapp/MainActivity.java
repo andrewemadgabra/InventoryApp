@@ -46,8 +46,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void clicksale(int id) {
-        Intent intent = new Intent( MainActivity.this, saleview.class );
-        intent.putExtra( "id", id );
-        startActivity( intent );
+
     }
 }

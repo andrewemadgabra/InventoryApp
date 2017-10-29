@@ -15,6 +15,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.io.FileDescriptor;
 import java.io.IOException;
@@ -71,9 +72,14 @@ public class Detailsitem extends AppCompatActivity {
         decrease.setOnClickListener( new View.OnClickListener() {
             public void onClick(View v) {
                 negative = Integer.parseInt( QuantityTEXT.getText().toString() );
-                negative = negative - 1;
-                QuantityTEXT.setText( Integer.toString( negative ) );
-                db.update( negative, idopen );
+                if(negative > 0) {
+                    negative = negative - 1;
+                    QuantityTEXT.setText( Integer.toString( negative ) );
+                    db.update( negative, idopen );
+                }
+                else {
+                    Toast.makeText( getApplicationContext(), "The quantity equal zero", Toast.LENGTH_LONG ).show();
+                }
             }
         } );
         Button orders = (Button) findViewById( R.id.order );

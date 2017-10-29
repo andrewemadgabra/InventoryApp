@@ -1,6 +1,7 @@
 package com.example.andrew.inventoryapp;
 
 import android.content.Context;
+import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -14,6 +15,7 @@ import android.widget.Button;
 import android.widget.CursorAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.io.FileDescriptor;
 import java.io.IOException;
@@ -26,7 +28,7 @@ import java.io.IOException;
 public class InventoryAdapter extends CursorAdapter {
     private static final String TAG = "InventoryAdapter";
     MainActivity activity;
-    public static int idsale;
+    public static int idsale=MainActivity.positions;
     public static int salevalue;
 
     public InventoryAdapter(MainActivity context, Cursor c) {
@@ -56,16 +58,17 @@ public class InventoryAdapter extends CursorAdapter {
 
 
     @Override
-    public void bindView(View view, final Context context, Cursor cursor) {
+    public void bindView(View view, final Context context, final Cursor cursor) {
         TextView NameTEXT = (TextView) view.findViewById( R.id.productname );
-        TextView PriceTEXT = (TextView) view.findViewById( R.id.textprice );
+        final TextView PriceTEXT = (TextView) view.findViewById( R.id.textprice );
         TextView QuantityTEXT = (TextView) view.findViewById( R.id.quantity );
         ImageView ImageVIEW = (ImageView) view.findViewById( R.id.image );
+        final TextView Priceupdate = (TextView) view.findViewById( R.id.priceupdate );
         String name = cursor.getString( cursor.getColumnIndex( DataContract.DataEntry.COLUMN_NAME ) );
         NameTEXT.setText( name );
         String blob = cursor.getString( cursor.getColumnIndex( DataContract.DataEntry.COLUMN_IMAGE ) );
         ImageVIEW.setImageBitmap( getUri( Uri.parse( blob ) ) );
-        String price = cursor.getString( cursor.getColumnIndex( DataContract.DataEntry.COLUMN_PRICE ) );
+        final String price = cursor.getString( cursor.getColumnIndex( DataContract.DataEntry.COLUMN_PRICE ) );
         PriceTEXT.setText( price );
         salevalue = Integer.parseInt( PriceTEXT.getText().toString() );
         String quantity = cursor.getString( cursor.getColumnIndex( DataContract.DataEntry.COLUMN_QUANTITY ) );
@@ -75,8 +78,20 @@ public class InventoryAdapter extends CursorAdapter {
         sales.setOnClickListener( new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                activity.clicksale( test );
-                idsale = test;
+                DataBase db =new DataBase(activity);db.readData();
+                Cursor read = db.select( test );
+                read.moveToFirst();
+                String prices = read.getString( read.getColumnIndex( DataContract.DataEntry.COLUMN_PRICE ) );
+                int result = Integer.parseInt( prices.toString() );
+                    if (result != 0 && result > 0 && result != 1) {
+                        result--;
+                        db.updatesale( result, test );
+                        PriceTEXT.setText(String.valueOf(result));
+                    }
+                    else {
+                        Toast.makeText(activity.getApplicationContext(), "No less price more than", Toast.LENGTH_LONG ).show();
+                    }
+
             }
         } );
 
