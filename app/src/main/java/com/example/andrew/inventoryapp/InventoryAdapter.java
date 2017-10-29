@@ -27,8 +27,6 @@ import java.io.IOException;
 public class InventoryAdapter extends CursorAdapter {
     private static final String TAG = "InventoryAdapter";
     MainActivity activity;
-    //public static int idsale = MainActivity.positions;
-    //public static int salevalue;
 
     public InventoryAdapter(MainActivity context, Cursor c) {
         super( context, c, 0 );
@@ -67,7 +65,6 @@ public class InventoryAdapter extends CursorAdapter {
         ImageVIEW.setImageBitmap( getUri( Uri.parse( blob ) ) );
         final String price = cursor.getString( cursor.getColumnIndex( DataContract.DataEntry.COLUMN_PRICE ) );
         PriceTEXT.setText( price );
-        //salevalue = Integer.parseInt( PriceTEXT.getText().toString() );
         String quantity = cursor.getString( cursor.getColumnIndex( DataContract.DataEntry.COLUMN_QUANTITY ) );
         QuantityTEXT.setText( String.valueOf( quantity ) );
         final int test = (int) cursor.getLong( cursor.getColumnIndex( DataContract.DataEntry._ID ) );
@@ -80,7 +77,7 @@ public class InventoryAdapter extends CursorAdapter {
                 Cursor read = db.select( test );
                 read.moveToFirst();
                 String quantity = read.getString( read.getColumnIndex( DataContract.DataEntry.COLUMN_QUANTITY ) );
-                int result = Integer.parseInt( quantity.toString());
+                int result = Integer.parseInt( quantity.toString() );
                 if (result != 0 && result > 0 && result != 1) {
                     result--;
                     db.updatequantity( result, test );

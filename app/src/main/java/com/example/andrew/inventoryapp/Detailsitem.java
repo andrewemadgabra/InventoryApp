@@ -72,12 +72,11 @@ public class Detailsitem extends AppCompatActivity {
         decrease.setOnClickListener( new View.OnClickListener() {
             public void onClick(View v) {
                 negative = Integer.parseInt( QuantityTEXT.getText().toString() );
-                if(negative > 0) {
+                if (negative > 0) {
                     negative = negative - 1;
                     QuantityTEXT.setText( Integer.toString( negative ) );
                     db.update( negative, idopen );
-                }
-                else {
+                } else {
                     Toast.makeText( getApplicationContext(), "The quantity equal zero", Toast.LENGTH_LONG ).show();
                 }
             }

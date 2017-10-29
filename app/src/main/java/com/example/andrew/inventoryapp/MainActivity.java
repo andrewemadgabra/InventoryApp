@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
                 positions = (int) id;
                 db.readData();
                 Intent intent = new Intent( MainActivity.this, Detailsitem.class );
-                intent.putExtra("positions", positions );
+                intent.putExtra( "positions", positions );
                 finish();
                 startActivity( intent );
             }

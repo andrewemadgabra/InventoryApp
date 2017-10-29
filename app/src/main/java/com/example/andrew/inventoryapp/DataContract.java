@@ -10,6 +10,7 @@ import android.provider.BaseColumns;
 public class DataContract {
     public DataContract() {
     }
+
     public final class DataEntry implements BaseColumns {
         public static final String Table_name = "Item";
         public static final String _ID = BaseColumns._ID;

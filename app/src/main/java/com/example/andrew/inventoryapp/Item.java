@@ -10,8 +10,10 @@ public class Item {
     public String price;
     public String image;
     public String email;
+
     public Item() {
     }
+
     public Item(String productName, String quantity, String price, String image, String email) {
         this.productName = productName;
         this.quantity = quantity;
@@ -19,6 +21,7 @@ public class Item {
         this.image = image;
         this.email = email;
     }
+
     public String setImage(String image) {
         this.image = image;
         return image;
