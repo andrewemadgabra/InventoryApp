@@ -93,15 +93,6 @@
             android:layout_alignParentTop="true"
             android:onClick="sales"
             android:text="sale"/>
-        <!--<Button
-            android:id="@+id/Details"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Details"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginTop="23dp"/>-->
 
     </RelativeLayout>
 
